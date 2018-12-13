@@ -1,5 +1,5 @@
 {
-  "name": "list_of_species",
+  "name": "list-of-species",
   "options": {
     "idInjection": false,
     "postgresql": {

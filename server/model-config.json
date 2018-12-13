@@ -43,7 +43,7 @@
     "dataSource": "cardamine",
     "public": true
   },
-  "display_types": {
+  "display-types": {
     "dataSource": "cardamine",
     "public": true
   },
@@ -59,7 +59,7 @@
     "dataSource": "cardamine",
     "public": true
   },
-  "list_of_species": {
+  "list-of-species": {
     "dataSource": "cardamine",
     "public": true
   },
@@ -67,7 +67,7 @@
     "dataSource": "cardamine",
     "public": true
   },
-  "los_comments": {
+  "los-comments": {
     "dataSource": "cardamine",
     "public": true
   },
@@ -79,7 +79,7 @@
     "dataSource": "cardamine",
     "public": true
   },
-  "phytogeographical_district": {
+  "phytogeographical-district": {
     "dataSource": "cardamine",
     "public": true
   },
@@ -91,19 +91,19 @@
     "dataSource": "cardamine",
     "public": true
   },
-  "world_l1": {
+  "world-l1": {
     "dataSource": "cardamine",
     "public": true
   },
-  "world_l2": {
+  "world-l2": {
     "dataSource": "cardamine",
     "public": true
   },
-  "world_l3": {
+  "world-l3": {
     "dataSource": "cardamine",
     "public": true
   },
-  "world_l4": {
+  "world-l4": {
     "dataSource": "cardamine",
     "public": true
   }

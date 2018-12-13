@@ -63,7 +63,7 @@ async function discover(models) {
         const schemaModel = schema[`public.${model}`];
 
         schemaModel.base = "PersistedModel";
-        schemaModel.name = model;
+        schemaModel.name = modelDashed;
 
         const filePath = `../common/models/${modelDashed}`;
         // write json file
@@ -77,7 +77,7 @@ async function discover(models) {
             makeJsModel(model)
         );
 
-        schemas_config[model] = { dataSource: DATASOURCE_NAME, public: true };
+        schemas_config[modelDashed] = { dataSource: DATASOURCE_NAME, public: true };
 
     }
 

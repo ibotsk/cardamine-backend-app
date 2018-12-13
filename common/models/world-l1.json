@@ -1,5 +1,5 @@
 {
-  "name": "world_l1",
+  "name": "world-l1",
   "options": {
     "idInjection": false,
     "postgresql": {

@@ -1,5 +1,5 @@
 {
-  "name": "los_comments",
+  "name": "los-comments",
   "options": {
     "idInjection": false,
     "postgresql": {

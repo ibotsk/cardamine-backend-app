@@ -1,5 +1,5 @@
 {
-  "name": "phytogeographical_district",
+  "name": "phytogeographical-district",
   "options": {
     "idInjection": false,
     "postgresql": {
