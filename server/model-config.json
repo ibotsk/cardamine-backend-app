@@ -34,5 +34,77 @@
   "Role": {
     "dataSource": "db",
     "public": false
+  },
+  "cdata": {
+    "dataSource": "cardamine",
+    "public": true
+  },
+  "dcomments": {
+    "dataSource": "cardamine",
+    "public": true
+  },
+  "display_types": {
+    "dataSource": "cardamine",
+    "public": true
+  },
+  "dna": {
+    "dataSource": "cardamine",
+    "public": true
+  },
+  "family": {
+    "dataSource": "cardamine",
+    "public": true
+  },
+  "history": {
+    "dataSource": "cardamine",
+    "public": true
+  },
+  "list_of_species": {
+    "dataSource": "cardamine",
+    "public": true
+  },
+  "literature": {
+    "dataSource": "cardamine",
+    "public": true
+  },
+  "los_comments": {
+    "dataSource": "cardamine",
+    "public": true
+  },
+  "material": {
+    "dataSource": "cardamine",
+    "public": true
+  },
+  "persons": {
+    "dataSource": "cardamine",
+    "public": true
+  },
+  "phytogeographical_district": {
+    "dataSource": "cardamine",
+    "public": true
+  },
+  "reference": {
+    "dataSource": "cardamine",
+    "public": true
+  },
+  "synonyms": {
+    "dataSource": "cardamine",
+    "public": true
+  },
+  "world_l1": {
+    "dataSource": "cardamine",
+    "public": true
+  },
+  "world_l2": {
+    "dataSource": "cardamine",
+    "public": true
+  },
+  "world_l3": {
+    "dataSource": "cardamine",
+    "public": true
+  },
+  "world_l4": {
+    "dataSource": "cardamine",
+    "public": true
   }
 }
