@@ -1,21 +1,21 @@
 {
   "name": "cdata",
+  "base": "PersistedModel",
   "options": {
     "idInjection": false,
     "postgresql": {
       "schema": "public",
       "table": "cdata"
-    },
-    "relations": {}
+    }
   },
   "properties": {
     "id": {
       "type": "Number",
+      "id": 1,
       "required": true,
       "length": null,
       "precision": null,
       "scale": 0,
-      "id": 1,
       "postgresql": {
         "columnName": "id",
         "dataType": "integer",
@@ -746,5 +746,34 @@
       }
     }
   },
-  "base": "PersistedModel"
+  "validations": [],
+  "relations": {
+    "dna": {
+      "type": "hasOne",
+      "model": "dna",
+      "foreignKey": "idCdata"
+    },
+    "material": {
+      "type": "hasOne",
+      "model": "material",
+      "foreignKey": "idCdata"
+    },
+    "histories": {
+      "type": "hasMany",
+      "model": "history",
+      "foreignKey": "idData"
+    },
+    "dcomments": {
+      "type": "hasMany",
+      "model": "dcomments",
+      "foreignKey": "idCdata"
+    },
+    "counted-by": {
+      "type": "belongsTo",
+      "model": "persons",
+      "foreignKey": "countedBy"
+    }
+  },
+  "acls": [],
+  "methods": {}
 }

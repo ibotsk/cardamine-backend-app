@@ -1,21 +1,21 @@
 {
   "name": "literature",
+  "base": "PersistedModel",
   "options": {
     "idInjection": false,
     "postgresql": {
       "schema": "public",
       "table": "literature"
-    },
-    "relations": {}
+    }
   },
   "properties": {
     "id": {
       "type": "Number",
+      "id": 1,
       "required": true,
       "length": null,
       "precision": null,
       "scale": 0,
-      "id": 1,
       "postgresql": {
         "columnName": "id",
         "dataType": "integer",
@@ -311,5 +311,19 @@
       }
     }
   },
-  "base": "PersistedModel"
+  "validations": [],
+  "relations": {
+    "references": {
+      "type": "hasMany",
+      "model": "reference",
+      "foreignKey": "idLiterature"
+    },
+    "display-type": {
+      "type": "belongsTo",
+      "model": "display-types",
+      "foreignKey": "displayType"
+    }
+  },
+  "acls": [],
+  "methods": {}
 }

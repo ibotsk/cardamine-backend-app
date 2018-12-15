@@ -1,21 +1,21 @@
 {
   "name": "los-comments",
+  "base": "PersistedModel",
   "options": {
     "idInjection": false,
     "postgresql": {
       "schema": "public",
       "table": "los_comments"
-    },
-    "relations": {}
+    }
   },
   "properties": {
     "id": {
       "type": "Number",
+      "id": 1,
       "required": true,
       "length": null,
       "precision": null,
       "scale": 0,
-      "id": 1,
       "postgresql": {
         "columnName": "id",
         "dataType": "integer",
@@ -146,5 +146,8 @@
       }
     }
   },
-  "base": "PersistedModel"
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
 }

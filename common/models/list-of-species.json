@@ -1,21 +1,21 @@
 {
   "name": "list-of-species",
+  "base": "PersistedModel",
   "options": {
     "idInjection": false,
     "postgresql": {
       "schema": "public",
       "table": "list_of_species"
-    },
-    "relations": {}
+    }
   },
   "properties": {
     "id": {
       "type": "Number",
+      "id": 1,
       "required": true,
       "length": null,
       "precision": null,
       "scale": 0,
-      "id": 1,
       "postgresql": {
         "columnName": "id",
         "dataType": "integer",
@@ -446,5 +446,98 @@
       }
     }
   },
-  "base": "PersistedModel"
+  "validations": [],
+  "relations": {
+    "histories": {
+      "type": "hasMany",
+      "model": "history",
+      "foreignKey": "idStandardisedName"
+    },
+    "references": {
+      "type": "hasMany",
+      "model": "reference",
+      "foreignKey": "idStandardisedName"
+    },
+    "basionym-for": {
+      "type": "hasMany",
+      "model": "list-of-species",
+      "foreignKey": "idBasionym"
+    },
+    "nomen-novum-for": {
+      "type": "hasMany",
+      "model": "list-of-species",
+      "foreignKey": "idNomenNovum"
+    },
+    "replaced-for": {
+      "type": "hasMany",
+      "model": "list-of-species",
+      "foreignKey": "idReplaced"
+    },
+    "los-comments": {
+      "type": "hasMany",
+      "model": "los-comments",
+      "foreignKey": "idListOfSpecies"
+    },
+    "accepted": {
+      "type": "belongsTo",
+      "model": "list-of-species",
+      "foreignKey": "idAcceptedName"
+    },
+    "basionym": {
+      "type": "belongsTo",
+      "model": "list-of-species",
+      "foreignKey": "idBasionym"
+    },
+    "replaced": {
+      "type": "belongsTo",
+      "model": "list-of-species",
+      "foreignKey": "idBasionym"
+    },
+    "nomen-novum": {
+      "type": "belongsTo",
+      "model": "list-of-species",
+      "foreignKey": "idNomenNovum"
+    },
+    "synonyms-taxonomic": {
+      "type": "hasMany",
+      "model": "list-of-species",
+      "foreignKey": "idParent",
+      "through": "synonyms",
+      "keyThrough": "idSynonym",
+      "scope": {
+        "where": {
+          "syntype": 2,
+          "order": "rorder"
+        }
+      }
+    },
+    "synonyms-nomenclatoric": {
+      "type": "hasMany",
+      "model": "list-of-species",
+      "foreignKey": "idParent",
+      "through": "synonyms",
+      "keyThrough": "idSynonym",
+      "scope": {
+        "where": {
+          "syntype": 3,
+          "order": "rorder"
+        }
+      }
+    },
+    "synonyms-invalid": {
+      "type": "hasMany",
+      "model": "list-of-species",
+      "foreignKey": "idParent",
+      "through": "synonyms",
+      "keyThrough": "idSynonym",
+      "scope": {
+        "where": {
+          "syntype": 1,
+          "order": "rorder"
+        }
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
 }

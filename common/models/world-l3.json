@@ -1,21 +1,21 @@
 {
   "name": "world-l3",
+  "base": "PersistedModel",
   "options": {
     "idInjection": false,
     "postgresql": {
       "schema": "public",
       "table": "world_l3"
-    },
-    "relations": {}
+    }
   },
   "properties": {
     "id": {
       "type": "Number",
+      "id": 1,
       "required": true,
       "length": null,
       "precision": null,
       "scale": 0,
-      "id": 1,
       "postgresql": {
         "columnName": "id",
         "dataType": "integer",
@@ -86,5 +86,19 @@
       }
     }
   },
-  "base": "PersistedModel"
+  "validations": [],
+  "relations": {
+    "world-l4s": {
+      "type": "hasMany",
+      "model": "world-l4",
+      "foreignKey": "idParent"
+    },
+    "world-l2": {
+      "type": "belongsTo",
+      "model": "world-l2",
+      "foreignKey": "idParent"
+    }
+  },
+  "acls": [],
+  "methods": {}
 }

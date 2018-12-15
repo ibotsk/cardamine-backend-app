@@ -7,7 +7,7 @@
   },
   "scripts": {
     "lint": "eslint .",
-    "start": "node .",
+    "start": "nodemon .",
     "posttest": "npm run lint"
   },
   "dependencies": {
@@ -19,7 +19,6 @@
     "loopback-component-explorer": "^6.2.0",
     "loopback-connector-postgresql": "^3.5.0",
     "nodemon": "^1.18.8",
-    "npm": "^6.5.0",
     "serve-favicon": "^2.0.1",
     "strong-error-handler": "^3.0.0"
   },

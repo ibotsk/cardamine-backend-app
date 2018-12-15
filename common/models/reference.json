@@ -1,21 +1,21 @@
 {
   "name": "reference",
+  "base": "PersistedModel",
   "options": {
     "idInjection": false,
     "postgresql": {
       "schema": "public",
       "table": "reference"
-    },
-    "relations": {}
+    }
   },
   "properties": {
     "id": {
       "type": "Number",
+      "id": 1,
       "required": true,
       "length": null,
       "precision": null,
       "scale": 0,
-      "id": 1,
       "postgresql": {
         "columnName": "id",
         "dataType": "integer",
@@ -146,5 +146,24 @@
       }
     }
   },
-  "base": "PersistedModel"
+  "validations": [],
+  "relations": {
+    "material": {
+      "type": "belongsTo",
+      "model": "material",
+      "foreignKey": "idMaterial"
+    },
+    "literature": {
+      "type": "belongsTo",
+      "model": "literature",
+      "foreignKey": "idLiterature"
+    },
+    "original-identification": {
+      "type": "belongsTo",
+      "model": "list-of-species",
+      "foreignKey": "idStandardisedName"
+    }
+  },
+  "acls": [],
+  "methods": {}
 }

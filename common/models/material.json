@@ -1,21 +1,21 @@
 {
   "name": "material",
+  "base": "PersistedModel",
   "options": {
     "idInjection": false,
     "postgresql": {
       "schema": "public",
       "table": "material"
-    },
-    "relations": {}
+    }
   },
   "properties": {
     "id": {
       "type": "Number",
+      "id": 1,
       "required": true,
       "length": null,
       "precision": null,
       "scale": 0,
-      "id": 1,
       "postgresql": {
         "columnName": "id",
         "dataType": "integer",
@@ -476,5 +476,44 @@
       }
     }
   },
-  "base": "PersistedModel"
+  "validations": [],
+  "relations": {
+    "reference": {
+      "type": "hasOne",
+      "model": "reference",
+      "foreignKey": "idMaterial"
+    },
+    "cdata": {
+      "type": "belongsTo",
+      "model": "cdata",
+      "foreignKey": "idCdata"
+    },
+    "world-l4": {
+      "type": "belongsTo",
+      "model": "world-l4",
+      "foreignKey": "idWorld4"
+    },
+    "collected-by": {
+      "type": "belongsTo",
+      "model": "persons",
+      "foreignKey": "collectedBy"
+    },
+    "identified-by": {
+      "type": "belongsTo",
+      "model": "persons",
+      "foreignKey": "identifiedBy"
+    },
+    "checked-by": {
+      "type": "belongsTo",
+      "model": "persons",
+      "foreignKey": "checkedBy"
+    },
+    "phytogeographical-district": {
+      "type": "belongsTo",
+      "model": "phytogeographical-district",
+      "foreignKey": "phytogeographicalDistrict"
+    }
+  },
+  "acls": [],
+  "methods": {}
 }

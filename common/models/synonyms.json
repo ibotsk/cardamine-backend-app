@@ -1,21 +1,21 @@
 {
   "name": "synonyms",
+  "base": "PersistedModel",
   "options": {
     "idInjection": false,
     "postgresql": {
       "schema": "public",
       "table": "synonyms"
-    },
-    "relations": {}
+    }
   },
   "properties": {
     "id": {
       "type": "Number",
+      "id": 1,
       "required": true,
       "length": null,
       "precision": null,
       "scale": 0,
-      "id": 1,
       "postgresql": {
         "columnName": "id",
         "dataType": "integer",
@@ -101,5 +101,19 @@
       }
     }
   },
-  "base": "PersistedModel"
+  "validations": [],
+  "relations": {
+    "parent": {
+      "type": "belongsTo",
+      "model": "list-of-species",
+      "foreignKey": "idParent"
+    },
+    "synonym": {
+      "type": "belongsTo",
+      "model": "list-of-species",
+      "foreignKey": "idSynonym"
+    }
+  },
+  "acls": [],
+  "methods": {}
 }
