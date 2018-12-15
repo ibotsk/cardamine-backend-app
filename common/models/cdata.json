@@ -761,7 +761,10 @@
     "histories": {
       "type": "hasMany",
       "model": "history",
-      "foreignKey": "idData"
+      "foreignKey": "idData",
+      "scope": {
+        "order": ["h_date DESC", "id DESC"]
+      }
     },
     "dcomments": {
       "type": "hasMany",
