@@ -763,7 +763,10 @@
       "model": "history",
       "foreignKey": "idData",
       "scope": {
-        "order": ["h_date DESC", "id DESC"]
+        "order": [
+          "h_date DESC",
+          "id DESC"
+        ]
       }
     },
     "dcomments": {
@@ -775,6 +778,19 @@
       "type": "belongsTo",
       "model": "persons",
       "foreignKey": "countedBy"
+    },
+    "latest-revision": {
+      "type": "hasOne",
+      "model": "history",
+      "foreignKey": "idData",
+      "scope": {
+        "order": [
+          "h_date DESC",
+          "id DESC"
+        ],
+        "limit": 1,
+        "include": "list-of-species"
+      }
     }
   },
   "acls": [],
