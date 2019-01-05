@@ -6,14 +6,13 @@
     "postgresql": {
       "schema": "public",
       "table": "family"
-    },
-    "relations": {}
+    }
   },
   "properties": {
     "id": {
       "type": "Number",
       "id": 1,
-      "required": true,
+      "required": false,
       "length": null,
       "precision": null,
       "scale": 0,

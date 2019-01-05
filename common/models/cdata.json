@@ -764,8 +764,8 @@
       "foreignKey": "idData",
       "scope": {
         "order": [
-          "h_date DESC",
-          "id DESC"
+          "h_date",
+          "id"
         ]
       }
     },
