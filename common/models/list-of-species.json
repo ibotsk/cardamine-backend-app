@@ -43,6 +43,7 @@
     "hybrid": {
       "type": "Boolean",
       "required": true,
+      "default": false,
       "length": null,
       "precision": null,
       "scale": null,
@@ -313,6 +314,7 @@
     "ntypeOrder": {
       "type": "Number",
       "required": true,
+      "default": 8,
       "length": null,
       "precision": null,
       "scale": 0,
@@ -373,6 +375,7 @@
     "isIsonym": {
       "type": "Boolean",
       "required": true,
+      "default": false,
       "length": null,
       "precision": null,
       "scale": null,
@@ -388,6 +391,7 @@
     "isBasionym": {
       "type": "Boolean",
       "required": true,
+      "default": false,
       "length": null,
       "precision": null,
       "scale": null,

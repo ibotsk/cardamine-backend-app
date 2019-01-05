@@ -88,6 +88,7 @@
     "showInTree": {
       "type": "Boolean",
       "required": true,
+      "default": true,
       "length": null,
       "precision": null,
       "scale": null,
