@@ -59,6 +59,7 @@
     "genus": {
       "type": "String",
       "required": false,
+      "default": null,
       "length": 100,
       "precision": null,
       "scale": null,
@@ -74,6 +75,7 @@
     "species": {
       "type": "String",
       "required": false,
+      "default": null,
       "length": 100,
       "precision": null,
       "scale": null,
@@ -89,6 +91,7 @@
     "subsp": {
       "type": "String",
       "required": false,
+      "default": null,
       "length": 50,
       "precision": null,
       "scale": null,
@@ -104,6 +107,7 @@
     "var": {
       "type": "String",
       "required": false,
+      "default": null,
       "length": 50,
       "precision": null,
       "scale": null,
@@ -119,6 +123,7 @@
     "subvar": {
       "type": "String",
       "required": false,
+      "default": null,
       "length": 50,
       "precision": null,
       "scale": null,
@@ -134,6 +139,7 @@
     "forma": {
       "type": "String",
       "required": false,
+      "default": null,
       "length": 50,
       "precision": null,
       "scale": null,
@@ -149,6 +155,7 @@
     "authors": {
       "type": "String",
       "required": false,
+      "default": null,
       "length": 150,
       "precision": null,
       "scale": null,
@@ -164,6 +171,7 @@
     "genusH": {
       "type": "String",
       "required": false,
+      "default": null,
       "length": 100,
       "precision": null,
       "scale": null,
@@ -179,6 +187,7 @@
     "speciesH": {
       "type": "String",
       "required": false,
+      "default": null,
       "length": 100,
       "precision": null,
       "scale": null,
@@ -194,6 +203,7 @@
     "subspH": {
       "type": "String",
       "required": false,
+      "default": null,
       "length": 50,
       "precision": null,
       "scale": null,
@@ -209,6 +219,7 @@
     "varH": {
       "type": "String",
       "required": false,
+      "default": null,
       "length": 50,
       "precision": null,
       "scale": null,
@@ -224,6 +235,7 @@
     "subvarH": {
       "type": "String",
       "required": false,
+      "default": null,
       "length": 50,
       "precision": null,
       "scale": null,
@@ -239,6 +251,7 @@
     "formaH": {
       "type": "String",
       "required": false,
+      "default": null,
       "length": 50,
       "precision": null,
       "scale": null,
@@ -254,6 +267,7 @@
     "authorsH": {
       "type": "String",
       "required": false,
+      "default": null,
       "length": 150,
       "precision": null,
       "scale": null,
@@ -269,6 +283,7 @@
     "idAcceptedName": {
       "type": "Number",
       "required": false,
+      "default": null,
       "length": null,
       "precision": null,
       "scale": 0,
@@ -284,6 +299,7 @@
     "publication": {
       "type": "String",
       "required": false,
+      "default": null,
       "length": null,
       "precision": null,
       "scale": null,
@@ -299,6 +315,7 @@
     "tribus": {
       "type": "String",
       "required": false,
+      "default": null,
       "length": 200,
       "precision": null,
       "scale": null,
@@ -330,6 +347,7 @@
     "idBasionym": {
       "type": "Number",
       "required": false,
+      "default": null,
       "length": null,
       "precision": null,
       "scale": 0,
@@ -345,6 +363,7 @@
     "idNomenNovum": {
       "type": "Number",
       "required": false,
+      "default": null,
       "length": null,
       "precision": null,
       "scale": 0,
@@ -360,6 +379,7 @@
     "synType": {
       "type": "Number",
       "required": false,
+      "default": null,
       "length": null,
       "precision": null,
       "scale": 0,
@@ -407,6 +427,7 @@
     "idReplaced": {
       "type": "Number",
       "required": false,
+      "default": null,
       "length": null,
       "precision": null,
       "scale": 0,
@@ -422,6 +443,7 @@
     "idSuperiorName": {
       "type": "Number",
       "required": false,
+      "default": null,
       "length": null,
       "precision": null,
       "scale": 0,
@@ -437,6 +459,7 @@
     "origId": {
       "type": "Number",
       "required": false,
+      "default": null,
       "length": null,
       "precision": null,
       "scale": 0,
