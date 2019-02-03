@@ -19,9 +19,6 @@ module.exports = function (Listofspecies) {
 
     Listofspecies.beforeSave = function (next, modelInstance) {
 
-        if (modelInstance.hybrid) {
-            modelInstance.ntype = 'H';
-        }
         if (modelInstance.synType && parseInt(modelInstance.synType) === 1) {
             modelInstance.ntypeOrder = 4;
         } else {
