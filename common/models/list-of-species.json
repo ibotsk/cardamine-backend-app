@@ -533,9 +533,9 @@
       "keyThrough": "idSynonym",
       "scope": {
         "where": {
-          "syntype": 2,
-          "order": "rorder"
-        }
+          "syntype": 2
+        },
+        "order": "rorder ASC"
       }
     },
     "synonyms-nomenclatoric": {
@@ -546,9 +546,9 @@
       "keyThrough": "idSynonym",
       "scope": {
         "where": {
-          "syntype": 3,
-          "order": "rorder"
-        }
+          "syntype": 3
+        },
+        "order": "rorder ASC"
       }
     },
     "synonyms-invalid": {
@@ -559,10 +559,15 @@
       "keyThrough": "idSynonym",
       "scope": {
         "where": {
-          "syntype": 1,
-          "order": "rorder"
-        }
+          "syntype": 1
+        },
+        "order": "rorder ASC"
       }
+    },
+    "parent-of-synonyms": {
+      "type": "hasMany",
+      "model": "synonyms",
+      "foreignKey": "idParent"
     }
   },
   "acls": [],
