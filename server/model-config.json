@@ -14,7 +14,8 @@
     ]
   },
   "User": {
-    "dataSource": "db"
+    "dataSource": "db",
+    "public": false
   },
   "AccessToken": {
     "dataSource": "db",
@@ -104,6 +105,10 @@
     "public": true
   },
   "world-l4": {
+    "dataSource": "cardamine",
+    "public": true
+  },
+  "cardamine-users": {
     "dataSource": "cardamine",
     "public": true
   }
