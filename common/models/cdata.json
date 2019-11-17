@@ -25,21 +25,6 @@
         "nullable": "NO"
       }
     },
-    "idMaterial": {
-      "type": "Number",
-      "required": false,
-      "length": null,
-      "precision": null,
-      "scale": 0,
-      "postgresql": {
-        "columnName": "id_material",
-        "dataType": "integer",
-        "dataLength": null,
-        "dataPrecision": null,
-        "dataScale": 0,
-        "nullable": "YES"
-      }
-    },
     "n": {
       "type": "String",
       "required": false,
@@ -465,21 +450,6 @@
         "dataPrecision": null,
         "dataScale": null,
         "nullable": "NO"
-      }
-    },
-    "idDna": {
-      "type": "Number",
-      "required": false,
-      "length": null,
-      "precision": null,
-      "scale": 0,
-      "postgresql": {
-        "columnName": "id_dna",
-        "dataType": "integer",
-        "dataLength": null,
-        "dataPrecision": null,
-        "dataScale": 0,
-        "nullable": "YES"
       }
     },
     "ploidyLevelRevised": {
