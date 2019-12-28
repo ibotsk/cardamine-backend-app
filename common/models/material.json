@@ -25,21 +25,6 @@
         "nullable": "NO"
       }
     },
-    "idReference": {
-      "type": "Number",
-      "required": false,
-      "length": null,
-      "precision": null,
-      "scale": 0,
-      "postgresql": {
-        "columnName": "id_reference",
-        "dataType": "integer",
-        "dataLength": null,
-        "dataPrecision": null,
-        "dataScale": 0,
-        "nullable": "YES"
-      }
-    },
     "country": {
       "type": "String",
       "required": false,
