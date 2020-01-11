@@ -456,19 +456,35 @@
         "nullable": "YES"
       }
     },
-    "origId": {
-      "type": "Number",
+    "typification": {
+      "type": "String",
+      "required": false,
+      "default": null,
+      "length": 15,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "typification",
+        "dataType": "character varying",
+        "dataLength": 15,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "typeLocality": {
+      "type": "String",
       "required": false,
       "default": null,
       "length": null,
       "precision": null,
-      "scale": 0,
+      "scale": null,
       "postgresql": {
-        "columnName": "orig_id",
-        "dataType": "integer",
+        "columnName": "type_locality",
+        "dataType": "text",
         "dataLength": null,
         "dataPrecision": null,
-        "dataScale": 0,
+        "dataScale": null,
         "nullable": "YES"
       }
     }
