@@ -487,6 +487,38 @@
         "dataScale": null,
         "nullable": "YES"
       }
+    },
+    "proles": {
+      "type": "String",
+      "required": false,
+      "default": null,
+      "length": 50,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "proles",
+        "dataType": "character varying",
+        "dataLength": 50,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "unranked": {
+      "type": "String",
+      "required": false,
+      "default": null,
+      "length": 50,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "unranked",
+        "dataType": "character varying",
+        "dataLength": 50,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
     }
   },
   "validations": [],
