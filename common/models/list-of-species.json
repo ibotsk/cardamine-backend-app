@@ -612,6 +612,19 @@
         "order": "rorder ASC"
       }
     },
+    "synonyms-misidentification": {
+      "type": "hasMany",
+      "model": "list-of-species",
+      "foreignKey": "idParent",
+      "through": "synonyms",
+      "keyThrough": "idSynonym",
+      "scope": {
+        "where": {
+          "syntype": 4
+        },
+        "order": "rorder ASC"
+      }
+    },
     "parent-of-synonyms": {
       "type": "hasMany",
       "model": "synonyms",

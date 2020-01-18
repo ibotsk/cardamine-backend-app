@@ -100,6 +100,21 @@
         "dataScale": null,
         "nullable": "NO"
       }
+    },
+    "misidentificationAuthor": {
+      "type": "String",
+      "required": false,
+      "length": 250,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "misidentification_author",
+        "dataType": "character varying",
+        "dataLength": 250,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
     }
   },
   "validations": [],
