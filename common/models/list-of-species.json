@@ -519,6 +519,38 @@
         "dataScale": null,
         "nullable": "YES"
       }
+    },
+    "referenceToTypeDesignation": {
+      "type": "String",
+      "required": false,
+      "default": null,
+      "length": null,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "reference_to_type_designation",
+        "dataType": "text",
+        "dataLength": null,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "indLoc": {
+      "type": "String",
+      "required": false,
+      "default": null,
+      "length": null,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "ind_loc",
+        "dataType": "text",
+        "dataLength": null,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
     }
   },
   "validations": [],
