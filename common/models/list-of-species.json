@@ -665,6 +665,19 @@
         },
         "order": "rorder ASC"
       }
+    },
+    "synonyms-nomenclatoric-through": {
+      "type": "hasMany",
+      "model": "list-of-species",
+      "foreignKey": "idParent",
+      "through": "synonyms",
+      "keyThrough": "idSynonym",
+      "scope": {
+        "where": {
+          "syntype": 3
+        },
+        "order": "rorder ASC"
+      }
     }
   },
   "acls": [
