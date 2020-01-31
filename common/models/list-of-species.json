@@ -605,13 +605,19 @@
       "model": "list-of-species",
       "foreignKey": "idNomenNovum"
     },
+    "parent-of-synonyms": {
+      "type": "hasMany",
+      "model": "synonyms",
+      "foreignKey": "idParent"
+    },
     "synonyms-taxonomic": {
       "type": "hasMany",
-      "model": "list-of-species",
+      "model": "synonyms",
       "foreignKey": "idParent",
-      "through": "synonyms",
-      "keyThrough": "idSynonym",
       "scope": {
+        "include": [
+          "synonym"
+        ],
         "where": {
           "syntype": 2
         },
@@ -619,6 +625,48 @@
       }
     },
     "synonyms-nomenclatoric": {
+      "type": "hasMany",
+      "model": "synonyms",
+      "foreignKey": "idParent",
+      "scope": {
+        "include": [
+          "synonym"
+        ],
+        "where": {
+          "syntype": 3
+        },
+        "order": "rorder ASC"
+      }
+    },
+    "synonyms-invalid": {
+      "type": "hasMany",
+      "model": "synonyms",
+      "foreignKey": "idParent",
+      "scope": {
+        "include": [
+          "synonym"
+        ],
+        "where": {
+          "syntype": 1
+        },
+        "order": "rorder ASC"
+      }
+    },
+    "synonyms-misidentification": {
+      "type": "hasMany",
+      "model": "synonyms",
+      "foreignKey": "idParent",
+      "scope": {
+        "include": [
+          "synonym"
+        ],
+        "where": {
+          "syntype": 4
+        },
+        "order": "rorder ASC"
+      }
+    },
+    "synonyms-nomenclatoric-through": {
       "type": "hasMany",
       "model": "list-of-species",
       "foreignKey": "idParent",
@@ -630,37 +678,6 @@
         },
         "order": "rorder ASC"
       }
-    },
-    "synonyms-invalid": {
-      "type": "hasMany",
-      "model": "list-of-species",
-      "foreignKey": "idParent",
-      "through": "synonyms",
-      "keyThrough": "idSynonym",
-      "scope": {
-        "where": {
-          "syntype": 1
-        },
-        "order": "rorder ASC"
-      }
-    },
-    "synonyms-misidentification": {
-      "type": "hasMany",
-      "model": "list-of-species",
-      "foreignKey": "idParent",
-      "through": "synonyms",
-      "keyThrough": "idSynonym",
-      "scope": {
-        "where": {
-          "syntype": 4
-        },
-        "order": "rorder ASC"
-      }
-    },
-    "parent-of-synonyms": {
-      "type": "hasMany",
-      "model": "synonyms",
-      "foreignKey": "idParent"
     }
   },
   "acls": [
