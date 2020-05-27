@@ -698,6 +698,13 @@
       "principalType": "ROLE",
       "principalId": "$everyone",
       "permission": "ALLOW",
+      "property": "find"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
       "property": "findById"
     },
     {
@@ -720,6 +727,13 @@
       "principalId": "$everyone",
       "permission": "ALLOW",
       "property": "__get__synonyms-invalid"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "__get__synonyms-misidentification"
     },
     {
       "accessType": "EXECUTE",
