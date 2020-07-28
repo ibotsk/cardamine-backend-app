@@ -386,28 +386,28 @@
       }
     },
     "idWorldL1": {
-      "type": "integer",
+      "type": "number",
       "postgresql": {
         "columnName": "id_world_l1",
         "dataType": "integer"
       }
     },
     "idWorldL2": {
-      "type": "integer",
+      "type": "number",
       "postgresql": {
         "columnName": "id_world_l2",
         "dataType": "integer"
       }
     },
     "idWorldL3": {
-      "type": "integer",
+      "type": "number",
       "postgresql": {
         "columnName": "id_world_l3",
         "dataType": "integer"
       }
     },
     "idWorldL4": {
-      "type": "integer",
+      "type": "number",
       "postgresql": {
         "columnName": "id_world_l4",
         "dataType": "integer"
