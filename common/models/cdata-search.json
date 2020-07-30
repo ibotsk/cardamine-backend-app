@@ -82,6 +82,13 @@
         "dataType": "character varying"
       }
     },
+    "originalAuthors": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "original_authors",
+        "dataType": "character varying"
+      }
+    },
     "originalSubsp": {
       "type": "string",
       "postgresql": {
@@ -138,6 +145,13 @@
         "dataType": "character varying"
       }
     },
+    "originalAuthorsH": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "original_authors_h",
+        "dataType": "character varying"
+      }
+    },
     "originalSubspH": {
       "type": "string",
       "postgresql": {
@@ -177,6 +191,13 @@
       "type": "string",
       "postgresql": {
         "columnName": "latest_revision_species",
+        "dataType": "character varying"
+      }
+    },
+    "latestRevisionAuthors": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "latest_revision_authors",
         "dataType": "character varying"
       }
     },
@@ -236,6 +257,13 @@
         "dataType": "character varying"
       }
     },
+    "latestRevisionAuthorsH": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "latest_revision_authors_h",
+        "dataType": "character varying"
+      }
+    },
     "latestRevisionSubspH": {
       "type": "string",
       "postgresql": {
@@ -275,6 +303,13 @@
       "type": "string",
       "postgresql": {
         "columnName": "accepted_species",
+        "dataType": "character varying"
+      }
+    },
+    "acceptedAuthors": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "accepted_authors",
         "dataType": "character varying"
       }
     },
@@ -331,6 +366,13 @@
       "type": "string",
       "postgresql": {
         "columnName": "accepted_species_h",
+        "dataType": "character varying"
+      }
+    },
+    "acceptedAuthorsH": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "accepted_authors_h",
         "dataType": "character varying"
       }
     },
