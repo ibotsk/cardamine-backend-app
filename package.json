@@ -16,6 +16,7 @@
     "compression": "^1.0.3",
     "cors": "^2.5.2",
     "helmet": "^3.21.2",
+    "lodash.groupby": "^4.6.0",
     "loopback": "^3.26.0",
     "loopback-boot": "^2.6.5",
     "loopback-component-explorer": "^6.2.0",

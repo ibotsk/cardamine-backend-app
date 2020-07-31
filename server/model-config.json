@@ -120,9 +120,14 @@
         "sharedMethods": {
           "*": false,
           "find": true,
-          "count": true
+          "count": true,
+          "grouped": true
         }
       }
     }
+  },
+  "CdataSearchGrouped": {
+    "dataSource": null,
+    "public": false
   }
 }

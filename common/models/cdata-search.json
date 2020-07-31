@@ -12,8 +12,8 @@
   "properties": {
     "idCdata": {
       "type": "number",
-      "required": true,
       "id": true,
+      "required": true,
       "postgresql": {
         "columnName": "id_cdata",
         "dataType": "integer"
@@ -471,6 +471,13 @@
       "principalId": "$everyone",
       "permission": "ALLOW",
       "property": "find"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "grouped"
     }
   ],
   "methods": {}
