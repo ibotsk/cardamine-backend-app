@@ -90,6 +90,7 @@ module.exports = function(Cdatasearch) {
     Object.keys(groupedResults).forEach((k) => {
       const items = groupedResults[k];
       const { idCdata, ...relevantProps } = items[0].__data; // first item is enough since they are in the same group
+      relevantProps.cdataIds = items.map((e) => e.idCdata);
       relevantProps.recordsCount = items.length;
       results.push(relevantProps);
     })

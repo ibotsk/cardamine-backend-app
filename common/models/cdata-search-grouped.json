@@ -149,8 +149,13 @@
     },
     "recordsCount": {
       "type": "number",
-      "required": true,
-      "id": true
+      "id": true,
+      "required": true
+    },
+    "cdataIds": {
+      "type": [
+        "number"
+      ]
     }
   },
   "validations": [],
