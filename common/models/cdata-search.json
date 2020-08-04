@@ -68,6 +68,13 @@
         "dataType": "character varying"
       }
     },
+    "originalHybrid": {
+      "type": "boolean",
+      "postgresql": {
+        "columnName": "original_hybrid",
+        "dataType": "boolean"
+      }
+    },
     "originalGenus": {
       "type": "string",
       "postgresql": {
@@ -180,6 +187,13 @@
         "dataType": "character varying"
       }
     },
+    "latestRevisionHybrid": {
+      "type": "boolean",
+      "postgresql": {
+        "columnName": "latest_revision_hybrid",
+        "dataType": "boolean"
+      }
+    },
     "latestRevisionGenus": {
       "type": "string",
       "postgresql": {
@@ -290,6 +304,13 @@
       "postgresql": {
         "columnName": "latest_revision_forma_h",
         "dataType": "character varying"
+      }
+    },
+    "acceptedHybrid": {
+      "type": "boolean",
+      "postgresql": {
+        "columnName": "accepted_hybrid",
+        "dataType": "boolean"
       }
     },
     "acceptedGenus": {

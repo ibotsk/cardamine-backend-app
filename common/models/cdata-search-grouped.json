@@ -3,6 +3,9 @@
   "base": "Model",
   "idInjection": false,
   "properties": {
+    "latestRevisionHybrid": {
+      "type": "boolean"
+    },
     "latestRevisionGenus": {
       "type": "string"
     },
@@ -51,6 +54,9 @@
     "latestRevisionFormaH": {
       "type": "string"
     },
+    "originalHybrid": {
+      "type": "boolean"
+    },
     "originalGenus": {
       "type": "string"
     },
@@ -98,6 +104,9 @@
     },
     "originalFormaH": {
       "type": "string"
+    },
+    "acceptedHybrid": {
+      "type": "boolean"
     },
     "acceptedGenus": {
       "type": "string"

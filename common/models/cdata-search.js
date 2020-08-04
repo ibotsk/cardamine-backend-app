@@ -2,9 +2,18 @@
 
 const groupBy = require('lodash.groupby');
 
-const areEmpty = (vals) => {
-  const ne = vals.filter((e) => e);
+const isEmpty = (obj) => {
+  const ne = Object.keys(obj).filter((k) => obj[k]);
   return ne.length === 0;
+}
+
+const getNameFromResult = (obj, prefix) => {
+  const newObj = {};
+  Object.keys(obj).filter((k) => k.startsWith(prefix))
+    .forEach((k) => {
+      newObj[k] = obj[k];
+    });
+  return newObj;
 }
 
 /**
@@ -13,53 +22,28 @@ const areEmpty = (vals) => {
  * @param {object} item 
  */
 const groupingKey = (item) => {
-  const {
-    latestRevisionGenus, latestRevisionSpecies, latestRevisionAuthors,
-    latestRevisionSubsp, latestRevisionVar, latestRevisionSubvar,
-    latestRevisionForma, latestRevisionProles, latestRevisionUnranked,
-    latestRevisionGenusH, latestRevisionSpeciesH, latestRevisionAuthorsH,
-    latestRevisionSubspH, latestRevisionVarH, latestRevisionSubvarH,
-    latestRevisionFormaH,
-    originalGenus, originalSpecies, originalAuthors,
-    originalSubsp, originalVar, originalSubvar,
-    originalForma, originalProles, originalUnranked,
-    originalGenusH, originalSpeciesH, originalAuthorsH,
-    originalSubspH, originalVarH, originalSubvarH,
-    originalFormaH,
-    acceptedGenus, acceptedSpecies, acceptedAuthors,
-    acceptedSubsp, acceptedVar, acceptedSubvar,
-    acceptedForma, acceptedProles, acceptedUnranked,
-    acceptedGenusH, acceptedSpeciesH, acceptedAuthorsH,
-    acceptedSubspH, acceptedVarH, acceptedSubvarH,
-    acceptedFormaH,
-  } = item;
-  let forKey = [latestRevisionGenus, latestRevisionSpecies, latestRevisionAuthors,
-    latestRevisionSubsp, latestRevisionVar, latestRevisionSubvar,
-    latestRevisionForma, latestRevisionProles, latestRevisionUnranked,
-    latestRevisionGenusH, latestRevisionSpeciesH, latestRevisionAuthorsH,
-    latestRevisionSubspH, latestRevisionVarH, latestRevisionSubvarH,
-    latestRevisionFormaH];
+  const dataItem = item.__data;
+  const latestRevisionObj = getNameFromResult(dataItem, 'latestRevision');
+  const originalObj = getNameFromResult(dataItem, 'original');
+  const acceptedObj = getNameFromResult(dataItem, 'accepted');
 
-  const accepted = [
-    acceptedGenus, acceptedSpecies, acceptedAuthors,
-    acceptedSubsp, acceptedVar, acceptedSubvar,
-    acceptedForma, acceptedProles, acceptedUnranked,
-    acceptedGenusH, acceptedSpeciesH, acceptedAuthorsH,
-    acceptedSubspH, acceptedVarH, acceptedSubvarH,
-    acceptedFormaH
-  ];
+  let forKey = Object.keys(latestRevisionObj).map((k) => latestRevisionObj[k]);
 
-  if (areEmpty(accepted)) {
-    forKey = [...forKey, originalGenus, originalSpecies, originalAuthors,
-      originalSubsp, originalVar, originalSubvar,
-      originalForma, originalProles, originalUnranked,
-      originalGenusH, originalSpeciesH, originalAuthorsH,
-      originalSubspH, originalVarH, originalSubvarH,
-      originalFormaH];
+  if (isEmpty(acceptedObj)) {
+    const originalAsArray = Object.keys(originalObj).map((k) => originalObj[k]);
+    forKey = [...forKey, ...originalAsArray];
   } else {
-    forKey = [...forKey, ...accepted];
+    const acceptedAsArray = Object.keys(acceptedObj).map((k) => acceptedObj[k]);
+    forKey = [...forKey, ...acceptedAsArray];
   }
-  return forKey.map((e) => e ? e.trim() : e).join('|');
+  const nb = forKey.filter((e) => typeof e !== 'boolean');
+
+  return nb.map((e) => (
+    e !== null && e !== undefined
+      ? e.trim()
+      : e
+    )
+  ).join('|');
 }
 
 module.exports = function(Cdatasearch) {
