@@ -459,6 +459,18 @@
         "dataScale": 0,
         "nullable": "NO"
       }
+    },
+    "coordinatesGeoref": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "coordinates_georef"
+      }
+    },
+    "coordinatesForMap": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "coordinates_for_map"
+      }
     }
   },
   "validations": [],
