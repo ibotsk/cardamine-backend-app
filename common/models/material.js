@@ -3,10 +3,21 @@
 const wkx = require('wkx');
 
 const geogHexToJSON = (hexCoord) => {
+  if (!hexCoord) {
+    return null;
+  }
   const wkbBuffer = Buffer.from(hexCoord, 'hex');
   const geom = wkx.Geometry.parse(wkbBuffer);
 
-  return geom.toGeoJSON();
+  const {type, coordinates} = geom.toGeoJSON();
+
+  return {
+    type,
+    coordinates: {
+      lat: coordinates[1],
+      lon: coordinates[0],
+    },
+  };
 };
 
 module.exports = function(Material) {
