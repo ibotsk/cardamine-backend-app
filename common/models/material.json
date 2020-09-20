@@ -461,13 +461,13 @@
       }
     },
     "coordinatesGeoref": {
-      "type": "string",
+      "type": "String",
       "postgresql": {
         "columnName": "coordinates_georef"
       }
     },
     "coordinatesForMap": {
-      "type": "string",
+      "type": "String",
       "postgresql": {
         "columnName": "coordinates_for_map"
       }
