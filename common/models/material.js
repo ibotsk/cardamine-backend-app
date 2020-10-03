@@ -1,5 +1,11 @@
 'use strict';
 
+/**
+ * What is happening?
+ * - when getting, convert postgis geography hex string attributes to GeoJSON string
+ * - before saving, convert GeoJSON string attributes to postgis geography hex string
+ */
+
 const wkx = require('wkx');
 
 const geogHexToJSON = (hexCoord) => {
@@ -9,7 +15,7 @@ const geogHexToJSON = (hexCoord) => {
   const wkbBuffer = Buffer.from(hexCoord, 'hex');
   const geom = wkx.Geometry.parse(wkbBuffer);
 
-  const {type, coordinates} = geom.toGeoJSON();
+  const { type, coordinates } = geom.toGeoJSON();
 
   return {
     type,
@@ -22,11 +28,12 @@ const geogHexToJSON = (hexCoord) => {
 
 /**
  *
- * @param {string} coordinatesString stringified JSON that must contain lat and lon
+ * @param {string} coordinatesString stringified JSON that must contain:
+ * { coordinates: { lat, lon }}
  */
-const geogJSONToHex = (coordinatesString) => {
-  const {coordinates} = JSON.parse(coordinatesString);
-  const {lat, lon} = coordinates;
+const geogJSONStringToHex = (coordinatesString) => {
+  const { coordinates } = JSON.parse(coordinatesString);
+  const { lat, lon } = coordinates;
 
   if (!lat || !lon) {
     throw new Error(
@@ -39,7 +46,7 @@ const geogJSONToHex = (coordinatesString) => {
   return wkb.toString('hex');
 };
 
-module.exports = function(Material) {
+module.exports = function (Material) {
   Material.observe('loaded', (ctx, next) => {
     const data = ctx.data;
     if (data) {
@@ -56,22 +63,38 @@ module.exports = function(Material) {
 
   // coordinatesGeoref and coordinatesForMap of input object must be a stringified JSON with coordinates
   Material.observe('before save', (ctx, next) => {
-    const {instance} = ctx;
-    if (!instance) {
+    const { instance, currentInstance, data } = ctx;
+    if (!instance && !currentInstance) {
       throw new Error('No instance to save');
     }
 
-    if (instance.coordinatesGeoref) {
-      instance.coordinatesGeoref = geogJSONToHex(
-        instance.coordinatesGeoref
-      );
-    }
-    if (instance.coordinatesForMap) {
-      instance.coordinatesForMap = geogJSONToHex(
-        instance.coordinatesForMap
-      );
-    }
+    // perform create or update
+    if (instance) {
+      if (instance.coordinatesGeoref) {
+        instance.coordinatesGeoref = geogJSONStringToHex(
+          instance.coordinatesGeoref
+        );
+      }
+      if (instance.coordinatesForMap) {
+        instance.coordinatesForMap = geogJSONStringToHex(
+          instance.coordinatesForMap
+        );
+      }
+    } else if (currentInstance && data) { // case of updateAttributes
+      const { coordinatesGeoref, coordinatesForMap } = ctx.data;
 
+      if (coordinatesGeoref) {
+        ctx.data.coordinatesGeoref = geogJSONStringToHex(
+          coordinatesGeoref
+        );
+      }
+      if (coordinatesForMap) {
+        ctx.data.coordinatesForMap = geogJSONStringToHex(
+          coordinatesForMap
+        );
+      }
+    }
+    
     return next();
   });
 };
