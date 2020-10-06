@@ -39,21 +39,6 @@
         "dataScale": null,
         "nullable": "YES"
       }
-    },
-    "origId": {
-      "type": "Number",
-      "required": false,
-      "length": null,
-      "precision": null,
-      "scale": 0,
-      "postgresql": {
-        "columnName": "orig_id",
-        "dataType": "integer",
-        "dataLength": null,
-        "dataPrecision": null,
-        "dataScale": 0,
-        "nullable": "YES"
-      }
     }
   },
   "validations": [],
