@@ -16,18 +16,19 @@
     "compression": "^1.0.3",
     "cors": "^2.5.2",
     "helmet": "^3.21.2",
+    "lodash.groupby": "^4.6.0",
     "loopback": "^3.26.0",
     "loopback-boot": "^2.6.5",
     "loopback-component-explorer": "^6.2.0",
     "loopback-connector-postgresql": "^3.5.0",
-    "nodemon": "^1.18.8",
     "serve-favicon": "^2.0.1",
     "strong-error-handler": "^3.0.0",
     "wkx": "^0.5.0"
   },
   "devDependencies": {
     "eslint": "^6.7.2",
-    "eslint-config-loopback": "^8.0.0"
+    "eslint-config-loopback": "^8.0.0",
+    "nodemon": "^1.19.4"
   },
   "repository": {
     "type": "",

@@ -8,6 +8,8 @@ const ntypeOrderMap = (ntype) => {
         case "S":
         case "DS":
             return 3;
+        case "I":
+            return 4;
         case "U":
             return 5;
         default:
@@ -17,14 +19,9 @@ const ntypeOrderMap = (ntype) => {
 
 module.exports = function (Listofspecies) {
 
-    Listofspecies.beforeSave = function (next, modelInstance) {
-
-        if (modelInstance.synType && parseInt(modelInstance.synType) === 1) {
-            modelInstance.ntypeOrder = 4;
-        } else {
-            modelInstance.ntypeOrder = ntypeOrderMap(modelInstance.ntype);
-        }
+    Listofspecies.observe('before save', (ctx, next) => {
+        ctx.instance.ntypeOrder = ntypeOrderMap(ctx.instance.ntype);
         next();
-    };
+    });
 
 };

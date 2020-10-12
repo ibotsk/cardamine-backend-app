@@ -1,0 +1,174 @@
+{
+  "name": "CdataSearchGrouped",
+  "base": "Model",
+  "idInjection": false,
+  "properties": {
+    "latestRevisionHybrid": {
+      "type": "boolean"
+    },
+    "latestRevisionGenus": {
+      "type": "string"
+    },
+    "latestRevisionSpecies": {
+      "type": "string"
+    },
+    "latestRevisionAuthors": {
+      "type": "string"
+    },
+    "latestRevisionSubsp": {
+      "type": "string"
+    },
+    "latestRevisionVar": {
+      "type": "string"
+    },
+    "latestRevisionSubvar": {
+      "type": "string"
+    },
+    "latestRevisionForma": {
+      "type": "string"
+    },
+    "latestRevisionProles": {
+      "type": "string"
+    },
+    "latestRevisionUnranked": {
+      "type": "string"
+    },
+    "latestRevisionGenusH": {
+      "type": "string"
+    },
+    "latestRevisionSpeciesH": {
+      "type": "string"
+    },
+    "latestRevisionAuthorsH": {
+      "type": "string"
+    },
+    "latestRevisionSubspH": {
+      "type": "string"
+    },
+    "latestRevisionVarH": {
+      "type": "string"
+    },
+    "latestRevisionSubvarH": {
+      "type": "string"
+    },
+    "latestRevisionFormaH": {
+      "type": "string"
+    },
+    "originalHybrid": {
+      "type": "boolean"
+    },
+    "originalGenus": {
+      "type": "string"
+    },
+    "originalSpecies": {
+      "type": "string"
+    },
+    "originalAuthors": {
+      "type": "string"
+    },
+    "originalSubsp": {
+      "type": "string"
+    },
+    "originalVar": {
+      "type": "string"
+    },
+    "originalSubvar": {
+      "type": "string"
+    },
+    "originalForma": {
+      "type": "string"
+    },
+    "originalProles": {
+      "type": "string"
+    },
+    "originalUnranked": {
+      "type": "string"
+    },
+    "originalGenusH": {
+      "type": "string"
+    },
+    "originalSpeciesH": {
+      "type": "string"
+    },
+    "originalAuthorsH": {
+      "type": "string"
+    },
+    "originalSubspH": {
+      "type": "string"
+    },
+    "originalVarH": {
+      "type": "string"
+    },
+    "originalSubvarH": {
+      "type": "string"
+    },
+    "originalFormaH": {
+      "type": "string"
+    },
+    "acceptedHybrid": {
+      "type": "boolean"
+    },
+    "acceptedGenus": {
+      "type": "string"
+    },
+    "acceptedSpecies": {
+      "type": "string"
+    },
+    "acceptedAuthors": {
+      "type": "string"
+    },
+    "acceptedSubsp": {
+      "type": "string"
+    },
+    "acceptedVar": {
+      "type": "string"
+    },
+    "acceptedSubvar": {
+      "type": "string"
+    },
+    "acceptedForma": {
+      "type": "string"
+    },
+    "acceptedProles": {
+      "type": "string"
+    },
+    "acceptedUnranked": {
+      "type": "string"
+    },
+    "acceptedGenusH": {
+      "type": "string"
+    },
+    "acceptedSpeciesH": {
+      "type": "string"
+    },
+    "acceptedAuthorsH": {
+      "type": "string"
+    },
+    "acceptedSubspH": {
+      "type": "string"
+    },
+    "acceptedVarH": {
+      "type": "string"
+    },
+    "acceptedSubvarH": {
+      "type": "string"
+    },
+    "acceptedFormaH": {
+      "type": "string"
+    },
+    "recordsCount": {
+      "type": "number",
+      "id": true,
+      "required": true
+    },
+    "cdataIds": {
+      "type": [
+        "number"
+      ]
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
