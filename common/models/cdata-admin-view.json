@@ -1,0 +1,588 @@
+{
+  "name": "cdata-admin-view",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true,
+    "postgresql": {
+      "schema": "public",
+      "table": "v_cdata_for_admin"
+    }
+  },
+  "properties": {
+    "id": {
+      "type": "number",
+      "id": true,
+      "required": true,
+      "postgresql": {
+        "columnName": "cdata_id",
+        "dataType": "integer"
+      }
+    },
+    "n": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "n",
+        "dataType": "character varying"
+      }
+    },
+    "dn": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "dn",
+        "dataType": "character varying"
+      }
+    },
+    "ploidyLevelRevised": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "ploidy_level_revised",
+        "dataType": "character varying"
+      }
+    },
+    "ploidyLevel": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "ploidy_level",
+        "dataType": "character varying"
+      }
+    },
+    "x": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "x",
+        "dataType": "character varying"
+      }
+    },
+    "xRevised": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "x_revised",
+        "dataType": "character varying"
+      }
+    },
+    "countedBy": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "counted_by",
+        "dataType": "character varying"
+      }
+    },
+    "countedDate": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "counted_date",
+        "dataType": "character varying"
+      }
+    },
+    "numberOfAnalysedPlants": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "number_of_analysed_plants",
+        "dataType": "character varying"
+      }
+    },
+    "depositedIn": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "deposited_in",
+        "dataType": "character varying"
+      }
+    },
+    "cdataNote": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "cdata_note",
+        "dataType": "character varying"
+      }
+    },
+    "erroneous": {
+      "type": "boolean"
+    },
+    "duplicate": {
+      "type": "boolean"
+    },
+    "doubtful": {
+      "type": "boolean"
+    },
+    "ambiguous": {
+      "type": "boolean"
+    },
+    "dna_chCount": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "dna_ch_count",
+        "dataType": "character varying"
+      }
+    },
+    "dna_ploidyRevised": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "dna_ploidy_revised",
+        "dataType": "character varying"
+      }
+    },
+    "latestRevision_hybrid": {
+      "type": "boolean",
+      "postgresql": {
+        "columnName": "latest_revision_hybrid",
+        "dataType": "boolean"
+      }
+    },
+    "latestRevision_genus": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "latest_revision_genus",
+        "dataType": "character varying"
+      }
+    },
+    "latestRevision_species": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "latest_revision_species",
+        "dataType": "character varying"
+      }
+    },
+    "latestRevision_authors": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "latest_revision_authors",
+        "dataType": "character varying"
+      }
+    },
+    "latestRevision_subsp": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "latest_revision_subsp",
+        "dataType": "character varying"
+      }
+    },
+    "latestRevision_var": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "latest_revision_var",
+        "dataType": "character varying"
+      }
+    },
+    "latestRevision_subvar": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "latest_revision_subvar",
+        "dataType": "character varying"
+      }
+    },
+    "latestRevision_forma": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "latest_revision_forma",
+        "dataType": "character varying"
+      }
+    },
+    "latestRevision_proles": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "latest_revision_proles",
+        "dataType": "character varying"
+      }
+    },
+    "latestRevision_unranked": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "latest_revision_unranked",
+        "dataType": "character varying"
+      }
+    },
+    "latestRevision_genusH": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "latest_revision_genus_h",
+        "dataType": "character varying"
+      }
+    },
+    "latestRevision_speciesH": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "latest_revision_species_h",
+        "dataType": "character varying"
+      }
+    },
+    "latestRevision_authorsH": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "latest_revision_authors_h",
+        "dataType": "character varying"
+      }
+    },
+    "latestRevision_subspH": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "latest_revision_subsp_h",
+        "dataType": "character varying"
+      }
+    },
+    "latestRevision_varH": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "latest_revision_var_h",
+        "dataType": "character varying"
+      }
+    },
+    "latestRevision_subvarH": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "latest_revision_subvar_h",
+        "dataType": "character varying"
+      }
+    },
+    "latestRevision_formaH": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "latest_revision_forma_h",
+        "dataType": "character varying"
+      }
+    },
+    "original_hybrid": {
+      "type": "boolean",
+      "postgresql": {
+        "columnName": "original_hybrid",
+        "dataType": "boolean"
+      }
+    },
+    "original_genus": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "original_genus",
+        "dataType": "character varying"
+      }
+    },
+    "original_species": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "original_species",
+        "dataType": "character varying"
+      }
+    },
+    "original_authors": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "original_authors",
+        "dataType": "character varying"
+      }
+    },
+    "original_subsp": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "original_subsp",
+        "dataType": "character varying"
+      }
+    },
+    "original_var": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "original_var",
+        "dataType": "character varying"
+      }
+    },
+    "original_subvar": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "original_subvar",
+        "dataType": "character varying"
+      }
+    },
+    "original_forma": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "original_forma",
+        "dataType": "character varying"
+      }
+    },
+    "original_proles": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "original_proles",
+        "dataType": "character varying"
+      }
+    },
+    "original_unranked": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "original_unranked",
+        "dataType": "character varying"
+      }
+    },
+    "original_genusH": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "original_genus_h",
+        "dataType": "character varying"
+      }
+    },
+    "original_speciesH": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "original_species_h",
+        "dataType": "character varying"
+      }
+    },
+    "original_authorsH": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "original_authors_h",
+        "dataType": "character varying"
+      }
+    },
+    "original_subspH": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "original_subsp_h",
+        "dataType": "character varying"
+      }
+    },
+    "original_varH": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "original_var_h",
+        "dataType": "character varying"
+      }
+    },
+    "original_subvarH": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "original_subvar_h",
+        "dataType": "character varying"
+      }
+    },
+    "original_formaH": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "original_forma_h",
+        "dataType": "character varying"
+      }
+    },
+    "accepted_hybrid": {
+      "type": "boolean",
+      "postgresql": {
+        "columnName": "accepted_hybrid",
+        "dataType": "boolean"
+      }
+    },
+    "accepted_genus": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "accepted_genus",
+        "dataType": "character varying"
+      }
+    },
+    "accepted_species": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "accepted_species",
+        "dataType": "character varying"
+      }
+    },
+    "accepted_authors": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "accepted_authors",
+        "dataType": "character varying"
+      }
+    },
+    "accepted_subsp": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "accepted_subsp",
+        "dataType": "character varying"
+      }
+    },
+    "accepted_var": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "accepted_var",
+        "dataType": "character varying"
+      }
+    },
+    "accepted_subvar": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "accepted_subvar",
+        "dataType": "character varying"
+      }
+    },
+    "accepted_forma": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "accepted_forma",
+        "dataType": "character varying"
+      }
+    },
+    "accepted_proles": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "accepted_proles",
+        "dataType": "character varying"
+      }
+    },
+    "accepted_unranked": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "accepted_unranked",
+        "dataType": "character varying"
+      }
+    },
+    "accepted_genusH": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "accepted_genus_h",
+        "dataType": "character varying"
+      }
+    },
+    "accepted_speciesH": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "accepted_species_h",
+        "dataType": "character varying"
+      }
+    },
+    "accepted_authorsH": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "accepted_authors_h",
+        "dataType": "character varying"
+      }
+    },
+    "accepted_subspH": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "accepted_subsp_h",
+        "dataType": "character varying"
+      }
+    },
+    "accepted_varH": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "accepted_var_h",
+        "dataType": "character varying"
+      }
+    },
+    "accepted_subvarH": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "accepted_subvar_h",
+        "dataType": "character varying"
+      }
+    },
+    "accepted_formaH": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "accepted_forma_h",
+        "dataType": "character varying"
+      }
+    },
+    "country": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "country",
+        "dataType": "character varying"
+      }
+    },
+    "localityDescription": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "locality_description",
+        "dataType": "character varying"
+      }
+    },
+    "coordinatesLatOrig": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "coordinates_lat_orig",
+        "dataType": "character varying"
+      }
+    },
+    "coordinatesLonOrig": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "coordinates_lon_orig",
+        "dataType": "character varying"
+      }
+    },
+    "coordinatesGeoref": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "coordinates_georef",
+        "dataType": "character varying"
+      }
+    },
+    "paperAuthor": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "paper_author",
+        "dataType": "character varying"
+      }
+    },
+    "paperTitle": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "paper_title",
+        "dataType": "character varying"
+      }
+    },
+    "seriesSource": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "series_source",
+        "dataType": "character varying"
+      }
+    },
+    "volume": {
+      "type": "number"
+    },
+    "issue": {
+      "type": "string"
+    },
+    "publisher": {
+      "type": "string"
+    },
+    "editor": {
+      "type": "string"
+    },
+    "year": {
+      "type": "number"
+    },
+    "pages": {
+      "type": "string"
+    },
+    "journalName": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "journal_name",
+        "dataType": "character varying"
+      }
+    },
+    "worldL4": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "world_l4",
+        "dataType": "character varying"
+      }
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    },
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW"
+    }
+  ],
+  "methods": {}
+}
