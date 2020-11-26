@@ -535,49 +535,80 @@
         "dataType": "character varying"
       }
     },
-    "paperAuthor": {
+    "literature_displayType": {
       "type": "string",
       "postgresql": {
-        "columnName": "paper_author",
+        "columnName": "literature_display_type",
         "dataType": "character varying"
       }
     },
-    "paperTitle": {
+    "literature_paperAuthor": {
       "type": "string",
       "postgresql": {
-        "columnName": "paper_title",
+        "columnName": "literature_paper_author",
         "dataType": "character varying"
       }
     },
-    "seriesSource": {
+    "literature_paperTitle": {
       "type": "string",
       "postgresql": {
-        "columnName": "series_source",
+        "columnName": "literature_paper_title",
         "dataType": "character varying"
       }
     },
-    "volume": {
-      "type": "number"
-    },
-    "issue": {
-      "type": "string"
-    },
-    "publisher": {
-      "type": "string"
-    },
-    "editor": {
-      "type": "string"
-    },
-    "year": {
-      "type": "number"
-    },
-    "pages": {
-      "type": "string"
-    },
-    "journalName": {
+    "literature_seriesSource": {
       "type": "string",
       "postgresql": {
-        "columnName": "journal_name",
+        "columnName": "literature_series_source",
+        "dataType": "character varying"
+      }
+    },
+    "literature_volume": {
+      "type": "number",
+      "postgresql": {
+        "columnName": "literature_volume",
+        "dataType": "integer"
+      }
+    },
+    "literature_issue": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "literature_issue",
+        "dataType": "character varying"
+      }
+    },
+    "literature_publisher": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "literature_publisher",
+        "dataType": "character varying"
+      }
+    },
+    "literature_editor": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "literature_editor",
+        "dataType": "character varying"
+      }
+    },
+    "literature_year": {
+      "type": "number",
+      "postgresql": {
+        "columnName": "literature_year",
+        "dataType": "integer"
+      }
+    },
+    "literature_pages": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "literature_pages",
+        "dataType": "character varying"
+      }
+    },
+    "literature_journalName": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "literature_journal_name",
         "dataType": "character varying"
       }
     },
