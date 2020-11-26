@@ -122,6 +122,13 @@
         "dataType": "character varying"
       }
     },
+    "latestRevision_id": {
+      "type": "number",
+      "postgresql": {
+        "columnName": "latest_revision_id",
+        "dataType": "integer"
+      }
+    },
     "latestRevision_hybrid": {
       "type": "boolean",
       "postgresql": {
@@ -241,6 +248,13 @@
         "dataType": "character varying"
       }
     },
+    "original_id": {
+      "type": "number",
+      "postgresql": {
+        "columnName": "original_id",
+        "dataType": "integer"
+      }
+    },
     "original_hybrid": {
       "type": "boolean",
       "postgresql": {
@@ -358,6 +372,13 @@
       "postgresql": {
         "columnName": "original_forma_h",
         "dataType": "character varying"
+      }
+    },
+    "accepted_id": {
+      "type": "number",
+      "postgresql": {
+        "columnName": "accepted_id",
+        "dataType": "integer"
       }
     },
     "accepted_hybrid": {
