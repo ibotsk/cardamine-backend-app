@@ -129,5 +129,19 @@
   "CdataSearchGrouped": {
     "dataSource": null,
     "public": false
+  },
+  "cdata-admin-view": {
+    "dataSource": "cardamine",
+    "public": true,
+    "options": {
+      "remoting": {
+        "sharedMethods": {
+          "*": false,
+          "find": true,
+          "count": true,
+          "grouped": true
+        }
+      }
+    }
   }
 }
