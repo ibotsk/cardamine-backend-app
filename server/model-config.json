@@ -139,7 +139,7 @@
           "*": false,
           "find": true,
           "count": true,
-          "grouped": true
+          "refresh": true
         }
       }
     }
