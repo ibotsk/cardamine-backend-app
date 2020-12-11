@@ -71,17 +71,17 @@
       }
     },
     "volume": {
-      "type": "Number",
+      "type": "String",
       "required": false,
-      "length": null,
+      "length": 20,
       "precision": null,
-      "scale": 0,
+      "scale": null,
       "postgresql": {
         "columnName": "volume",
-        "dataType": "integer",
-        "dataLength": null,
+        "dataType": "character varying",
+        "dataLength": 20,
         "dataPrecision": null,
-        "dataScale": 0,
+        "dataScale": null,
         "nullable": "YES"
       }
     },
@@ -131,17 +131,17 @@
       }
     },
     "year": {
-      "type": "Number",
+      "type": "String",
       "required": false,
-      "length": null,
+      "length": 20,
       "precision": null,
-      "scale": 0,
+      "scale": null,
       "postgresql": {
         "columnName": "year",
-        "dataType": "integer",
-        "dataLength": null,
+        "dataType": "character varying",
+        "dataLength": 20,
         "dataPrecision": null,
-        "dataScale": 0,
+        "dataScale": null,
         "nullable": "YES"
       }
     },
