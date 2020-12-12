@@ -117,7 +117,7 @@
     },
     "drawing": {
       "type": "Boolean",
-      "required": true,
+      "required": false,
       "default": false,
       "length": null,
       "precision": null,
@@ -133,7 +133,7 @@
     },
     "photo": {
       "type": "Boolean",
-      "required": true,
+      "required": false,
       "default": false,
       "length": null,
       "precision": null,
@@ -149,7 +149,7 @@
     },
     "idiogram": {
       "type": "Boolean",
-      "required": true,
+      "required": false,
       "default": false,
       "length": null,
       "precision": null,
@@ -285,7 +285,7 @@
     },
     "erroneousRecord": {
       "type": "Boolean",
-      "required": true,
+      "required": false,
       "default": false,
       "length": null,
       "precision": null,
@@ -376,7 +376,7 @@
     },
     "duplicateData": {
       "type": "Boolean",
-      "required": true,
+      "required": false,
       "default": false,
       "length": null,
       "precision": null,
@@ -408,7 +408,7 @@
     },
     "hocLoco": {
       "type": "Boolean",
-      "required": true,
+      "required": false,
       "default": false,
       "length": null,
       "precision": null,
@@ -454,7 +454,7 @@
     },
     "excludeFromStatistics": {
       "type": "Boolean",
-      "required": true,
+      "required": false,
       "default": false,
       "length": null,
       "precision": null,
@@ -485,7 +485,7 @@
     },
     "doubtfulRecord": {
       "type": "Boolean",
-      "required": true,
+      "required": false,
       "default": false,
       "length": null,
       "precision": null,
@@ -591,7 +591,7 @@
     },
     "ambiguousRecord": {
       "type": "Boolean",
-      "required": true,
+      "required": false,
       "default": false,
       "length": null,
       "precision": null,
